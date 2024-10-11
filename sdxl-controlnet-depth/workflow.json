@@ -1,6 +1,6 @@
 {
-  "last_node_id": 27,
-  "last_link_id": 45,
+  "last_node_id": 31,
+  "last_link_id": 52,
   "nodes": [
     {
       "id": 7,
@@ -47,217 +47,8 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "text, watermark, deformation, abstract, unrealistic"
+        "text, watermark, deformation, abstract, unrealistic, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
       ]
-    },
-    {
-      "id": 13,
-      "type": "CLIPTextEncode",
-      "pos": {
-        "0": 421,
-        "1": -255
-      },
-      "size": {
-        "0": 210,
-        "1": 54
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 13
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 21,
-          "slot_index": 1,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            33
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "text, watermark, deformation, abstract, unrealistic"
-      ]
-    },
-    {
-      "id": 12,
-      "type": "CLIPTextEncode",
-      "pos": {
-        "0": 426,
-        "1": -297
-      },
-      "size": {
-        "0": 219,
-        "1": 54
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 11
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 18,
-          "slot_index": 1,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            32
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "(1) A detailed image of a human hand with fingers extended to show the number 1. The hand has the index finger pointing upward, while the other fingers are closed into the palm. The skin tone is natural, and the lighting highlights the contours and details of the hand. The image focuses on the hand.\n\n(2) At the background, far away, there is a green mountain of the peruvian andes.\n\n(3) A bit behind the hand, there is a condor flying through the blue sky."
-      ]
-    },
-    {
-      "id": 18,
-      "type": "VAEDecode",
-      "pos": {
-        "0": 1065,
-        "1": -334
-      },
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 36
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 37
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            30
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": {
-        "0": 1088,
-        "1": 190
-      },
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 28
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 8
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            9
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 19,
-      "type": "SaveImage",
-      "pos": {
-        "0": 1366,
-        "1": -406
-      },
-      "size": {
-        "0": 462.1468811035156,
-        "1": 441.9457702636719
-      },
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 30
-        }
-      ],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "refiner_output"
-      ],
-      "shape": 1
     },
     {
       "id": 11,
@@ -314,186 +105,6 @@
       ]
     },
     {
-      "id": 20,
-      "type": "KSampler",
-      "pos": {
-        "0": 681,
-        "1": -397
-      },
-      "size": {
-        "0": 315,
-        "1": 262
-      },
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 34
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 32
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 33
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 35
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            36
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "KSampler for refiner (like img2img)",
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        446981897911900,
-        "randomize",
-        15,
-        8,
-        "dpmpp_2m",
-        "normal",
-        0.25
-      ]
-    },
-    {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": {
-        "0": -52.802642822265625,
-        "1": 358
-      },
-      "size": {
-        "0": 397,
-        "1": 98
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            27
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            3,
-            5
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            8
-          ],
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "fenrisxlFlux_fenrisxlV164fp16SDXL.safetensors"
-      ]
-    },
-    {
-      "id": 26,
-      "type": "LoadImage",
-      "pos": {
-        "0": 434,
-        "1": 981
-      },
-      "size": [
-        315,
-        314
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            41
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_temp_klvio_00001_.png",
-        "image"
-      ]
-    },
-    {
-      "id": 23,
-      "type": "ControlNetLoader",
-      "pos": {
-        "0": 467,
-        "1": 780
-      },
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CONTROL_NET",
-          "type": "CONTROL_NET",
-          "links": [
-            40
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ControlNetLoader"
-      },
-      "widgets_values": [
-        "diffusion_pytorch_model.safetensors"
-      ]
-    },
-    {
       "id": 6,
       "type": "CLIPTextEncode",
       "pos": {
@@ -538,95 +149,243 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "(1) A detailed image of a human hand with fingers extended to show the number 1. The hand has the index finger pointing upward, while the other fingers are closed into the palm. The skin tone is natural, and the lighting highlights the contours and details of the hand. The image focuses on the hand.\n\n(2) At the background, far away, there is a green mountain of the peruvian andes.\n\n(3) A bit behind the hand, there is a condor flying through the blue sky."
+        "(1) A detailed image of a human hand with fingers extended to show the number 1. The hand has the index finger pointing upward, while the other fingers are closed into the palm. The skin tone is natural, and the lighting highlights the contours and details of the hand. The image focuses on the hand. The hand comes from a body which is not visible in the image.\n\n(2) At the background, far away, there is a green mountain of the peruvian andes.\n\n(3) A bit behind the hand, there is a condor flying through the blue sky."
       ]
     },
     {
-      "id": 9,
-      "type": "SaveImage",
+      "id": 16,
+      "type": "PrimitiveNode",
       "pos": {
-        "0": 1365,
-        "1": 168
+        "0": -64,
+        "1": 85
       },
       "size": {
-        "0": 426.084228515625,
-        "1": 437.66387939453125
+        "0": 398,
+        "1": 140
       },
       "flags": {},
-      "order": 15,
+      "order": 1,
       "mode": 0,
-      "inputs": [
+      "inputs": [],
+      "outputs": [
         {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 9
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            21,
+            22
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text"
+          }
         }
       ],
-      "outputs": [],
-      "properties": {},
+      "title": "Negative Prompt",
+      "properties": {
+        "Run widget replace on values": false
+      },
       "widgets_values": [
-        "base_output"
+        "text, watermark, deformation, abstract, unrealistic, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
       ],
-      "shape": 1
+      "color": "#332922",
+      "bgcolor": "#593930",
+      "shape": 4
     },
     {
-      "id": 17,
-      "type": "KSampler",
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
       "pos": {
-        "0": 863,
-        "1": 11
+        "0": -52.802642822265625,
+        "1": 358
+      },
+      "size": {
+        "0": 397,
+        "1": 98
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            27
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            3,
+            5
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "fenrisxlFlux_fenrisxlV164fp16SDXL.safetensors"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "PrimitiveNode",
+      "pos": {
+        "0": -54,
+        "1": -163
+      },
+      "size": {
+        "0": 402,
+        "1": 188
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            18,
+            19
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "(1) A detailed image of a human hand with fingers extended to show the number 1. The hand has the index finger pointing upward, while the other fingers are closed into the palm. The skin tone is natural, and the lighting highlights the contours and details of the hand. The image focuses on the hand. The hand comes from a body which is not visible in the image.\n\n(2) At the background, far away, there is a green mountain of the peruvian andes.\n\n(3) A bit behind the hand, there is a condor flying through the blue sky."
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 4
+    },
+    {
+      "id": 26,
+      "type": "LoadImage",
+      "pos": {
+        "0": -74,
+        "1": 571
       },
       "size": {
         "0": 315,
-        "1": 262
+        "1": 314
       },
       "flags": {},
-      "order": 12,
+      "order": 4,
       "mode": 0,
-      "inputs": [
+      "inputs": [],
+      "outputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 27
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            41
+          ],
+          "slot_index": 0
         },
         {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 44
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 45
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 38
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
         }
       ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_temp_klvio_00001_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "ControlNetLoader",
+      "pos": {
+        "0": 412,
+        "1": 859
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            40
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "controlnet-union-sdxl-1.0.safetensors"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "EmptyLatentImage",
+      "pos": {
+        "0": 307,
+        "1": 694
+      },
+      "size": {
+        "0": 295.7807922363281,
+        "1": 106
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
       "outputs": [
         {
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            28,
-            35
+            38
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
+      "title": "Image Size\n",
       "properties": {
-        "Node name for S&R": "KSampler"
+        "Node name for S&R": "EmptyLatentImage"
       },
       "widgets_values": [
-        169020927195211,
-        "randomize",
-        20,
-        6,
-        "dpmpp_2s_ancestral",
-        "normal",
+        1344,
+        768,
         1
       ]
     },
@@ -634,8 +393,8 @@
       "id": 25,
       "type": "ACN_AdvancedControlNetApply",
       "pos": {
-        "0": 998,
-        "1": 743
+        "0": 682,
+        "1": 275
       },
       "size": {
         "0": 285.6000061035156,
@@ -736,120 +495,412 @@
       ]
     },
     {
-      "id": 21,
-      "type": "EmptyLatentImage",
+      "id": 31,
+      "type": "Image Comparer (rgthree)",
       "pos": {
-        "0": 362,
-        "1": 559
+        "0": 2365,
+        "1": -34
+      },
+      "size": [
+        725.7094486051424,
+        442.46213316901253
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 52,
+          "dir": 3
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 51,
+          "dir": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_gkcvg_00003_.png&type=temp&subfolder=&rand=0.6440393922811669"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_gkcvg_00004_.png&type=temp&subfolder=&rand=0.8533981705049696"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1714,
+        "1": 250
       },
       "size": {
-        "0": 295.7807922363281,
-        "1": 106
+        "0": 426.084228515625,
+        "1": 437.66387939453125
       },
       "flags": {},
-      "order": 4,
+      "order": 15,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "base_output"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 1456,
+        "1": 251
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 28
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "links": [
-            38
+            9,
+            52
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 18,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 1429,
+        "1": -330
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 36
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50,
+            51
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
-      "title": "Image Size\n",
       "properties": {
-        "Node name for S&R": "EmptyLatentImage"
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "KSampler",
+      "pos": {
+        "0": 1055,
+        "1": -331
+      },
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 34
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 32
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 33
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            36
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "KSampler for refiner (like img2img)",
+      "properties": {
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        1344,
-        768,
+        279838473321371,
+        "randomize",
+        15,
+        8,
+        "dpmpp_2m",
+        "normal",
+        0.25
+      ]
+    },
+    {
+      "id": 13,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 432,
+        "1": -223
+      },
+      "size": {
+        "0": 210,
+        "1": 54
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 13
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 21,
+          "slot_index": 1,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            33
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark, deformation, abstract, unrealistic, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 427,
+        "1": -274
+      },
+      "size": {
+        "0": 219,
+        "1": 54
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 11
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 18,
+          "slot_index": 1,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            32
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(1) A detailed image of a human hand with fingers extended to show the number 1. The hand has the index finger pointing upward, while the other fingers are closed into the palm. The skin tone is natural, and the lighting highlights the contours and details of the hand. The image focuses on the hand. The hand comes from a body which is not visible in the image.\n\n(2) At the background, far away, there is a green mountain of the peruvian andes.\n\n(3) A bit behind the hand, there is a condor flying through the blue sky."
+      ]
+    },
+    {
+      "id": 17,
+      "type": "KSampler",
+      "pos": {
+        "0": 1099,
+        "1": 253
+      },
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 27
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 44
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 45
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            28,
+            35
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        692887470645942,
+        "randomize",
+        30,
+        6,
+        "dpmpp_2s_ancestral",
+        "normal",
         1
       ]
     },
     {
-      "id": 16,
-      "type": "PrimitiveNode",
+      "id": 19,
+      "type": "SaveImage",
       "pos": {
-        "0": -64,
-        "1": 85
+        "0": 1706,
+        "1": -406
       },
-      "size": {
-        "0": 398,
-        "1": 140
-      },
+      "size": [
+        456.6273448409379,
+        448.21378356673983
+      ],
       "flags": {},
-      "order": 5,
+      "order": 17,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
+      "inputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            21,
-            22
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "text"
-          }
+          "name": "images",
+          "type": "IMAGE",
+          "link": 50
         }
       ],
-      "title": "Negative Prompt",
-      "properties": {
-        "Run widget replace on values": false
-      },
+      "outputs": [],
+      "properties": {},
       "widgets_values": [
-        "text, watermark, deformation, abstract, unrealistic"
+        "refiner_output"
       ],
-      "color": "#332922",
-      "bgcolor": "#593930",
-      "shape": 4
-    },
-    {
-      "id": 15,
-      "type": "PrimitiveNode",
-      "pos": {
-        "0": -66,
-        "1": -154
-      },
-      "size": {
-        "0": 402,
-        "1": 188
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            18,
-            19
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
-      "title": "Positive Prompt",
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        "(1) A detailed image of a human hand with fingers extended to show the number 1. The hand has the index finger pointing upward, while the other fingers are closed into the palm. The skin tone is natural, and the lighting highlights the contours and details of the hand. The image focuses on the hand.\n\n(2) At the background, far away, there is a green mountain of the peruvian andes.\n\n(3) A bit behind the hand, there is a condor flying through the blue sky."
-      ],
-      "color": "#232",
-      "bgcolor": "#353",
-      "shape": 4
+      "shape": 1
     }
   ],
   "links": [
@@ -948,14 +999,6 @@
       8,
       0,
       "LATENT"
-    ],
-    [
-      30,
-      18,
-      0,
-      19,
-      0,
-      "IMAGE"
     ],
     [
       32,
@@ -1060,16 +1103,40 @@
       17,
       2,
       "CONDITIONING"
+    ],
+    [
+      50,
+      18,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      51,
+      18,
+      0,
+      31,
+      1,
+      "IMAGE"
+    ],
+    [
+      52,
+      8,
+      0,
+      31,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
     {
       "title": "RESULT WITH REFINER",
       "bounding": [
-        1331,
-        -498,
-        552,
-        560
+        1678,
+        -492,
+        515,
+        564
       ],
       "color": "#a1309b",
       "font_size": 24,
@@ -1078,8 +1145,8 @@
     {
       "title": "RESULT WITHOUT REFINER",
       "bounding": [
-        1337,
-        84,
+        1697,
+        164,
         461,
         543
       ],
@@ -1115,10 +1182,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5131581182307068,
+      "scale": 0.6209213230591556,
       "offset": [
-        989.1569540658693,
-        637.3093917492916
+        439.7449185022774,
+        544.0375338922913
       ]
     }
   },
