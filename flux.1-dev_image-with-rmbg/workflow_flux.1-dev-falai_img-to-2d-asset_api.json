@@ -1,0 +1,202 @@
+{
+  "38": {
+    "inputs": {
+      "images": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "39": {
+    "inputs": {
+      "transparency": true,
+      "model": "u2net",
+      "post_processing": false,
+      "only_mask": false,
+      "alpha_matting": false,
+      "alpha_matting_foreground_threshold": 240,
+      "alpha_matting_background_threshold": 0,
+      "alpha_matting_erode_size": 0,
+      "background_color": "none",
+      "images": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "Image Rembg (Remove Background)",
+    "_meta": {
+      "title": "Image Rembg (Remove Background)"
+    }
+  },
+  "44": {
+    "inputs": {
+      "padding_left": 0,
+      "padding_right": 0,
+      "padding_top": 0,
+      "padding_bottom": 0,
+      "image": [
+        "39",
+        0
+      ],
+      "mask": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "Bounded Image Crop with Mask",
+    "_meta": {
+      "title": "Bounded Image Crop with Mask"
+    }
+  },
+  "45": {
+    "inputs": {
+      "images": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "46": {
+    "inputs": {
+      "channel": "alpha",
+      "image": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "47": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "interpolation": "lanczos",
+      "method": "keep proportion",
+      "condition": "always",
+      "multiple_of": 0,
+      "image": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "48": {
+    "inputs": {
+      "images": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "50": {
+    "inputs": {
+      "images": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "51": {
+    "inputs": {
+      "action": "replace",
+      "tidy_tags": "yes",
+      "text_a": [
+        "52",
+        0
+      ],
+      "text_b": "@OBJECT",
+      "text_c": "a laptop computer, like a Thinkpad."
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "52": {
+    "inputs": {
+      "text": "Generate a high-resolution image of a single, well-defined object described in (1) with sharp and clean edges. The object should be fully centered and isolated from a plain, solid white or transparent background. Ensure there are no shadows, reflections, or gradients in the background to avoid interference during background removal. The lighting should be even, with no excessive highlights or dark areas on the object, ensuring smooth and uniform contours. The image should have a high level of detail and contrast between the object and the background, making it effortless to extract the subject for further editing.\n\n(1) @OBJECT"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "66": {
+    "inputs": {
+      "prompt": [
+        "51",
+        0
+      ],
+      "image_size": "square",
+      "num_inference_steps": 28,
+      "guidance_scale": 3.5,
+      "num_images": 1,
+      "enable_safety_checker": true,
+      "seed": 437102802158015
+    },
+    "class_type": "FalAPIFluxDevNode",
+    "_meta": {
+      "title": "Fal API Flux Dev"
+    }
+  },
+  "67": {
+    "inputs": {
+      "noise_radius": 7,
+      "preserve_edges": 0.75,
+      "sharpen": 5,
+      "ratio": 0.5,
+      "image": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "ImageSmartSharpen+",
+    "_meta": {
+      "title": "🔧 Image Smart Sharpen"
+    }
+  },
+  "68": {
+    "inputs": {
+      "images": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "69": {
+    "inputs": {
+      "text": "Generate a high-resolution image of a single, well-defined object described in (1) with sharp and clean edges. The object should be fully centered and isolated from a plain, solid white or transparent background. Ensure there are no shadows, reflections, or gradients in the background to avoid interference during background removal. The lighting should be even, with no excessive highlights or dark areas on the object, ensuring smooth and uniform contours. The image should have a high level of detail and contrast between the object and the background, making it effortless to extract the subject for further editing.\n\n(1) @OBJECT"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  }
+}

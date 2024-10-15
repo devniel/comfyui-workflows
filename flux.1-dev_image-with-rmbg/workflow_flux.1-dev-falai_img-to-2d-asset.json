@@ -1,0 +1,649 @@
+{
+  "last_node_id": 69,
+  "last_link_id": 106,
+  "nodes": [
+    {
+      "id": 44,
+      "type": "Bounded Image Crop with Mask",
+      "pos": {
+        "0": 3340,
+        "1": 1260
+      },
+      "size": {
+        "0": 352.79998779296875,
+        "1": 150
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 63
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            64,
+            68
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "IMAGE_BOUNDS",
+          "type": "IMAGE_BOUNDS",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Bounded Image Crop with Mask"
+      },
+      "widgets_values": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 38,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 2940,
+        "1": 1210
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 65
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 39,
+      "type": "Image Rembg (Remove Background)",
+      "pos": {
+        "0": 2390,
+        "1": 1150
+      },
+      "size": {
+        "0": 390.5999755859375,
+        "1": 250
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 105
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            63,
+            65,
+            66
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Rembg (Remove Background)"
+      },
+      "widgets_values": [
+        true,
+        "u2net",
+        false,
+        false,
+        false,
+        240,
+        0,
+        0,
+        "none"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 3860,
+        "1": 1480
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 64
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 51,
+      "type": "StringFunction|pysssss",
+      "pos": {
+        "0": 630,
+        "1": 1470
+      },
+      "size": {
+        "0": 400,
+        "1": 244
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 75,
+          "widget": {
+            "name": "text_a"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            98
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringFunction|pysssss"
+      },
+      "widgets_values": [
+        "replace",
+        "yes",
+        "",
+        "@OBJECT",
+        "a laptop computer, like a Thinkpad."
+      ]
+    },
+    {
+      "id": 50,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1550,
+        "1": 1790
+      },
+      "size": {
+        "0": 256.89703369140625,
+        "1": 281.1470642089844
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 100
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 66,
+      "type": "FalAPIFluxDevNode",
+      "pos": {
+        "0": 1080,
+        "1": 1840
+      },
+      "size": {
+        "0": 400,
+        "1": 244
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 98,
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            100,
+            102
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FalAPIFluxDevNode"
+      },
+      "widgets_values": [
+        "",
+        "square",
+        28,
+        3.5,
+        1,
+        true,
+        437102802158015,
+        "randomize"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 2340,
+        "1": 1870
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 103
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 67,
+      "type": "ImageSmartSharpen+",
+      "pos": {
+        "0": 2370,
+        "1": 1560
+      },
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            103,
+            105
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageSmartSharpen+"
+      },
+      "widgets_values": [
+        7,
+        0.75,
+        5,
+        0.5
+      ]
+    },
+    {
+      "id": 47,
+      "type": "ImageResize+",
+      "pos": {
+        "0": 4210,
+        "1": 1380
+      },
+      "size": {
+        "0": 315,
+        "1": 218
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            70
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "lanczos",
+        "keep proportion",
+        "always",
+        0
+      ]
+    },
+    {
+      "id": 52,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 170,
+        "1": 1460
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            75
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "Generate a high-resolution image of a single, well-defined object described in (1) with sharp and clean edges. The object should be fully centered and isolated from a plain, solid white or transparent background. Ensure there are no shadows, reflections, or gradients in the background to avoid interference during background removal. The lighting should be even, with no excessive highlights or dark areas on the object, ensuring smooth and uniform contours. The image should have a high level of detail and contrast between the object and the background, making it effortless to extract the subject for further editing.\n\n(1) @OBJECT"
+      ]
+    },
+    {
+      "id": 69,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 180,
+        "1": 1460
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "Generate a high-resolution image of a single, well-defined object described in (1) with sharp and clean edges. The object should be fully centered and isolated from a plain, solid white or transparent background. Ensure there are no shadows, reflections, or gradients in the background to avoid interference during background removal. The lighting should be even, with no excessive highlights or dark areas on the object, ensuring smooth and uniform contours. The image should have a high level of detail and contrast between the object and the background, making it effortless to extract the subject for further editing.\n\n(1) @OBJECT"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "ImageToMask",
+      "pos": {
+        "0": 2941,
+        "1": 1593
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            67
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "alpha"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 4670,
+        "1": 1380
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 70
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      63,
+      39,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      44,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      65,
+      39,
+      0,
+      38,
+      0,
+      "IMAGE"
+    ],
+    [
+      66,
+      39,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      67,
+      46,
+      0,
+      44,
+      1,
+      "MASK"
+    ],
+    [
+      68,
+      44,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      70,
+      47,
+      0,
+      48,
+      0,
+      "IMAGE"
+    ],
+    [
+      75,
+      52,
+      0,
+      51,
+      0,
+      "STRING"
+    ],
+    [
+      98,
+      51,
+      0,
+      66,
+      0,
+      "STRING"
+    ],
+    [
+      100,
+      66,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      102,
+      66,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ],
+    [
+      103,
+      67,
+      0,
+      68,
+      0,
+      "IMAGE"
+    ],
+    [
+      105,
+      67,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5131581182307077,
+      "offset": [
+        317.1427034098324,
+        -624.0155477146712
+      ]
+    }
+  },
+  "version": 0.4
+}
